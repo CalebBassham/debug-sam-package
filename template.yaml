@@ -17,8 +17,8 @@ Resources:
       BuildMethod: makefile
     Properties:
       CodeUri: .
-      Handler: hello-world
-      Runtime: go1.x
+      Handler: bootstrap
+      Runtime: provided.al2
       Tracing: Active # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
       Events:
         CatchAll:
