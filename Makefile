@@ -1,13 +1,13 @@
 .PHONY: build deploy clean build-HelloWorldFunction
 
 build:
-	sam build
+	@./scripts/build.sh
 
 deploy:
-	AWS_PROFILE=unitprints sam deploy
+	@./scripts/deploy.sh
 
 clean:
-	rm -rf .aws-sam
+	@./scripts/clean.sh
 
 build-HelloWorldFunction:
-	@./scripts/build.sh $(ARTIFACTS_DIR)
+	@./scripts/builds/hello-world.sh $(ARTIFACTS_DIR)
